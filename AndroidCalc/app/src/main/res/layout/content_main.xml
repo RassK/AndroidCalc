@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:id="@+id/tableLayout"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="20dp">
 
         <TableRow
             android:layout_width="match_parent"
@@ -27,8 +27,11 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textAlignment="viewEnd"
-                android:textSize="25pt"
-                android:layout_weight="1" />
+                android:textSize="21pt"
+                android:layout_weight="1"
+                android:id="@+id/inputView"
+                android:singleLine="true"
+                android:ellipsize="start"/>
         </TableRow>
 
         <TableRow
@@ -41,7 +44,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="CE"
+                android:textSize="20sp"
                 android:id="@+id/btn_reset"
+                android:tag="Full"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
                 android:background="@drawable/button_selector"/>
@@ -51,7 +56,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="C"
+                android:textSize="20sp"
                 android:id="@+id/btn_clear"
+                android:tag="Clear"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
                 android:background="@drawable/button_selector"/>
@@ -61,7 +68,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="DEL"
+                android:textSize="20sp"
                 android:id="@+id/btn_del"
+                android:tag="Delete"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
                 android:background="@drawable/button_selector"/>
@@ -71,7 +80,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="/"
+                android:textSize="20sp"
                 android:id="@+id/btn_command_share"
+                android:tag="Divide"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
                 android:background="@drawable/button_selector"/>
@@ -87,6 +98,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="7"
+                android:textSize="25sp"
                 android:id="@+id/btn7"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -97,6 +109,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="8"
+                android:textSize="25sp"
                 android:id="@+id/btn8"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -107,6 +120,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="9"
+                android:textSize="25sp"
                 android:id="@+id/btn9"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -117,7 +131,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="X"
+                android:textSize="20sp"
                 android:id="@+id/btn_command_mult"
+                android:tag="Multiply"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
                 android:background="@drawable/button_selector"/>
@@ -133,6 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="4"
+                android:textSize="25sp"
                 android:id="@+id/btn4"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -143,6 +160,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="5"
+                android:textSize="25sp"
                 android:id="@+id/btn5"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -153,6 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="6"
+                android:textSize="25sp"
                 android:id="@+id/btn6"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -163,7 +182,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="-"
+                android:textSize="20sp"
                 android:id="@+id/btn_command_sub"
+                android:tag="Subtract"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
                 android:background="@drawable/button_selector"/>
@@ -178,27 +199,8 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:text="3"
-                android:id="@+id/btn3"
-                android:layout_weight="0.25"
-                android:textColor="@color/White"
-                android:background="@drawable/button_selector"/>
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:text="2"
-                android:id="@+id/btn2"
-                android:layout_weight="0.25"
-                android:textColor="@color/White"
-                android:background="@drawable/button_selector"/>
-
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
                 android:text="1"
+                android:textSize="25sp"
                 android:id="@+id/btn1"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -208,8 +210,32 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
+                android:text="2"
+                android:textSize="25sp"
+                android:id="@+id/btn2"
+                android:layout_weight="0.25"
+                android:textColor="@color/White"
+                android:background="@drawable/button_selector"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="3"
+                android:textSize="25sp"
+                android:id="@+id/btn3"
+                android:layout_weight="0.25"
+                android:textColor="@color/White"
+                android:background="@drawable/button_selector"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
                 android:text="+"
+                android:textSize="20sp"
                 android:id="@+id/btn_command_add"
+                android:tag="Add"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
                 android:background="@drawable/button_selector"/>
@@ -225,6 +251,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="+/-"
+                android:textSize="20sp"
                 android:id="@+id/btn_command_neg"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -235,6 +262,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="0"
+                android:textSize="25sp"
                 android:id="@+id/btn0"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -245,6 +273,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="."
+                android:textSize="20sp"
                 android:id="@+id/btn_comma"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
@@ -255,6 +284,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:text="="
+                android:textSize="35sp"
                 android:id="@+id/btn_command_eq"
                 android:layout_weight="0.25"
                 android:textColor="@color/White"
